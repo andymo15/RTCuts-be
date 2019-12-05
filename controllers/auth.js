@@ -59,13 +59,14 @@ const updateProfile = (req,res) => {
         res.json({
             status:200,
             data: updatedProfile,
+
         });
     });
 };
 
 const logout = (req,res) => {
-    if (!req.session.currentUser)
-        return res.status(401).json({status: 401, message:'Unauthorized'});
+    // if (!req.session.currentUser)
+    //     return res.status(401).json({status: 401, message:'Unauthorized'});
     req.session.destroy(err=>{
         if (err)
             return res.status(500).json({
