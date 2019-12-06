@@ -5,8 +5,12 @@ const ctrl = require('../controllers');
 // /ap1/v1/appts
 
 router.post('/', ctrl.appointment.createAppointment);
-router.get('/', ctrl.appointment.index);
-router.get('/:uid', ctrl.appointment.showBooked);
+router.get('/', ctrl.appointment.showAll);
+router.get('/show/:uid', ctrl.appointment.showBooked);
+router.put('/:uid', ctrl.appointment.editAppointment);
+router.delete('/delete/:uid', ctrl.appointment.deleteAppointment);
+
+
 
 
 module.exports= router;
