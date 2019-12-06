@@ -14,4 +14,5 @@ useUnifiedTopology: true,
 
 module.exports ={
     User: require('./User'),
+    Appointments: require('./Appointments'),
 };
