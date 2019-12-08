@@ -1,7 +1,8 @@
 const db = require('../models');
 
 const createAppointment = (req, res) => {
-    const appointmentData = {...req.body};
+    const appointmentData = {...req.body, who: req.session.currentUser.id};
+    console.log(appointmentData);
     // remember to use it
     // const appointmentData = {...req.body, who: req.session.currentUser.uid};
     db.Appointments.create(appointmentData, (err, createdAppt)=>{
