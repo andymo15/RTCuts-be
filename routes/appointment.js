@@ -8,7 +8,7 @@ router.post('/', ctrl.appointment.createAppointment);
 router.get('/', ctrl.appointment.showAll);
 router.get('/show/:uid', ctrl.appointment.showBooked);
 router.put('/:uid', ctrl.appointment.editAppointment);
-router.delete('/delete/:uid', ctrl.appointment.deleteAppointment);
+router.delete('/delete', ctrl.appointment.deleteAppointment);
 
 
 
