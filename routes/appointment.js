@@ -12,5 +12,4 @@ router.delete('/delete/:uid', ctrl.appointment.deleteAppointment);
 
 
 
-
 module.exports= router;

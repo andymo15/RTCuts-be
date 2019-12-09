@@ -30,7 +30,7 @@ app.use(session({
     store: new MongoStore({ url: process.env.MONGO_URI }),
     secret: process.env.SESSION_SECRET,
     resave: false,
-    saveUnitialized: false, 
+    saveUninitialized: false, 
     cookie: {
         maxAge: 1000 * 60 * 60 * 24 * 7 * 2, 
     }
@@ -44,6 +44,7 @@ app.get('/', (req,res)=>{
 
 app.use('/api/v1/auth', routes.auth);
 app.use('/api/v1/appts', routes.appointment);
+app.use('/api/v1/user', routes.user);
 
 
 

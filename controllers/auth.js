@@ -25,6 +25,7 @@ const register = (req,res) => {
                 db.User.create(newUser, (err, savedUser)=>{
                     if(err) return res.status(500).json({status:500, message:'Something went wrong. Please try again.'})
                     res.sendStatus(201);
+                    console.log(savedUser)
                 });
             });
         });
