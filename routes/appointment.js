@@ -7,8 +7,8 @@ const ctrl = require('../controllers');
 router.post('/', ctrl.appointment.createAppointment);
 router.get('/', ctrl.appointment.showAll);
 router.get('/show/:uid', ctrl.appointment.showBooked);
-router.put('/:uid', ctrl.appointment.editAppointment);
-router.delete('/delete', ctrl.appointment.deleteAppointment);
+router.put('/:id', ctrl.appointment.editAppointment);
+router.delete('/delete/:id', ctrl.appointment.deleteAppointment);
 
 
 

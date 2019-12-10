@@ -43,7 +43,7 @@ const showAll = (req, res) => {
 }
 
 const editAppointment = (req,res) => {
-    db.Appointments.findByIdAndUpdate(req.params.uid, req.body, {new:true}, (err, updatedAppt) =>{
+    db.Appointments.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updatedAppt) =>{
         if (err) return res.status(500).json({
             status: 500,
             message: err
@@ -56,7 +56,7 @@ const editAppointment = (req,res) => {
 }
 
 const deleteAppointment = (req,res) => {
-    db.Appointments.findByIdAndDelete(req.params.uid, (err, deletedAppt)=>{
+    db.Appointments.findByIdAndDelete(req.params.id, (err, deletedAppt)=>{
     if (err) return res.status(500).json({
         status: 500,
         message: err,
