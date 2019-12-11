@@ -48,4 +48,6 @@ app.use('/api/v1/user', routes.user);
 
 
 
-app.listen(PORT, () => console.log(`Server connected at http://localhost:${PORT}`));
+// app.listen(PORT, () => console.log(`Server connected at http://localhost:${PORT}`));
+
+app.listen(process.env.PORT || 4000);
